@@ -1,0 +1,50 @@
+[
+  {
+    "id": "u000",
+    "email": "core@glimmora.com",
+    "name": "AI Command Core",
+    "role": "ai_core",
+    "avatar": "AI",
+    "organization": "GlimmoraNautica · Intelligence Engine"
+  },
+  {
+    "id": "u001",
+    "email": "admiral@glimmora.com",
+    "name": "Capt. James Blackwood",
+    "role": "executive",
+    "avatar": "JB",
+    "organization": "GlimmoraNautica HQ"
+  },
+  {
+    "id": "u002",
+    "email": "manager@glimmora.com",
+    "name": "Sarah Chen",
+    "role": "fleet_ops",
+    "avatar": "SC",
+    "organization": "GlimmoraNautica · Operations"
+  },
+  {
+    "id": "u003",
+    "email": "trader@glimmora.com",
+    "name": "Marco Silva",
+    "role": "trade_intel",
+    "avatar": "MS",
+    "organization": "GlimmoraNautica · Trade Flow"
+  },
+  {
+    "id": "u004",
+    "email": "analyst@glimmora.com",
+    "name": "Priya Kumar",
+    "role": "risk_intel",
+    "avatar": "PK",
+    "organization": "GlimmoraNautica · Predictive Risk"
+  },
+  {
+    "id": "u005",
+    "email": "port@glimmora.com",
+    "name": "David Roberts",
+    "role": "port_ops",
+    "avatar": "DR",
+    "organization": "GlimmoraNautica · Port Network"
+  }
+]

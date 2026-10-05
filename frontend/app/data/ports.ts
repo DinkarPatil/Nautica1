@@ -1,0 +1,34 @@
+import { Port } from "../types";
+
+export const ports: Port[] = [
+  { id: "p001", name: "Port of Rotterdam", country: "Netherlands", countryCode: "NL", lat: 51.9, lng: 4.4, congestionPct: 42, queueCount: 18, avgWaitHours: 12.4, throughputTEU: 1180000, status: "Operational", region: "Northern Europe", unlocode: "NLRTM" },
+  { id: "p002", name: "Port of Singapore", country: "Singapore", countryCode: "SG", lat: 1.26, lng: 103.82, congestionPct: 67, queueCount: 34, avgWaitHours: 28.6, throughputTEU: 3200000, status: "Congested", region: "Southeast Asia", unlocode: "SGSIN" },
+  { id: "p003", name: "Port of Shanghai", country: "China", countryCode: "CN", lat: 31.2, lng: 121.7, congestionPct: 78, queueCount: 52, avgWaitHours: 36.2, throughputTEU: 4600000, status: "Congested", region: "East Asia", unlocode: "CNSHA" },
+  { id: "p004", name: "Port of Los Angeles", country: "United States", countryCode: "US", lat: 33.7, lng: -118.3, congestionPct: 55, queueCount: 24, avgWaitHours: 19.8, throughputTEU: 920000, status: "Congested", region: "North America", unlocode: "USLAX" },
+  { id: "p005", name: "Jebel Ali Port", country: "UAE", countryCode: "AE", lat: 25.0, lng: 55.1, congestionPct: 38, queueCount: 14, avgWaitHours: 10.2, throughputTEU: 1450000, status: "Operational", region: "Middle East", unlocode: "AEJEA" },
+  { id: "p006", name: "Port of Hamburg", country: "Germany", countryCode: "DE", lat: 53.5, lng: 9.9, congestionPct: 31, queueCount: 11, avgWaitHours: 8.7, throughputTEU: 780000, status: "Operational", region: "Northern Europe", unlocode: "DEHAM" },
+  { id: "p007", name: "Port of Busan", country: "South Korea", countryCode: "KR", lat: 35.1, lng: 129.1, congestionPct: 49, queueCount: 21, avgWaitHours: 15.3, throughputTEU: 1820000, status: "Operational", region: "East Asia", unlocode: "KRBSN" },
+  { id: "p008", name: "Port of Santos", country: "Brazil", countryCode: "BR", lat: -23.9, lng: -46.3, congestionPct: 71, queueCount: 38, avgWaitHours: 42.0, throughputTEU: 480000, status: "Critical", region: "South America", unlocode: "BRSSZ" },
+  { id: "p009", name: "Jawaharlal Nehru Port", country: "India", countryCode: "IN", lat: 18.9, lng: 72.9, congestionPct: 63, queueCount: 29, avgWaitHours: 24.5, throughputTEU: 620000, status: "Congested", region: "South Asia", unlocode: "INNSA" },
+  { id: "p010", name: "Port of Piraeus", country: "Greece", countryCode: "GR", lat: 37.9, lng: 23.6, congestionPct: 45, queueCount: 16, avgWaitHours: 14.1, throughputTEU: 540000, status: "Operational", region: "Mediterranean", unlocode: "GRPIR" },
+  { id: "p011", name: "Port of Algeciras", country: "Spain", countryCode: "ES", lat: 36.1, lng: -5.5, congestionPct: 28, queueCount: 9, avgWaitHours: 7.2, throughputTEU: 560000, status: "Operational", region: "Mediterranean", unlocode: "ESALG" },
+  { id: "p012", name: "Port of Antwerp", country: "Belgium", countryCode: "BE", lat: 51.2, lng: 4.4, congestionPct: 52, queueCount: 22, avgWaitHours: 17.8, throughputTEU: 1020000, status: "Congested", region: "Northern Europe", unlocode: "BEANR" },
+  { id: "p013", name: "Port Klang", country: "Malaysia", countryCode: "MY", lat: 3.0, lng: 101.4, congestionPct: 59, queueCount: 26, avgWaitHours: 21.4, throughputTEU: 1340000, status: "Congested", region: "Southeast Asia", unlocode: "MYPKG" },
+  { id: "p014", name: "Port of Tanjung Pelepas", country: "Malaysia", countryCode: "MY", lat: 1.4, lng: 103.6, congestionPct: 41, queueCount: 15, avgWaitHours: 11.9, throughputTEU: 920000, status: "Operational", region: "Southeast Asia", unlocode: "MYPTP" },
+  { id: "p015", name: "Port of Kaohsiung", country: "Taiwan", countryCode: "TW", lat: 22.6, lng: 120.3, congestionPct: 44, queueCount: 18, avgWaitHours: 13.5, throughputTEU: 980000, status: "Operational", region: "East Asia", unlocode: "TWKHH" },
+  { id: "p016", name: "Port of Felixstowe", country: "UK", countryCode: "GB", lat: 51.9, lng: 1.3, congestionPct: 36, queueCount: 13, avgWaitHours: 9.8, throughputTEU: 420000, status: "Operational", region: "Northern Europe", unlocode: "GBFXT" },
+  { id: "p017", name: "Port of Colombo", country: "Sri Lanka", countryCode: "LK", lat: 6.9, lng: 79.8, congestionPct: 57, queueCount: 23, avgWaitHours: 20.1, throughputTEU: 720000, status: "Congested", region: "South Asia", unlocode: "LKCMB" },
+  { id: "p018", name: "Port of Yokohama", country: "Japan", countryCode: "JP", lat: 35.4, lng: 139.6, congestionPct: 33, queueCount: 12, avgWaitHours: 9.1, throughputTEU: 680000, status: "Operational", region: "East Asia", unlocode: "JPYOK" },
+  { id: "p019", name: "Port of Durban", country: "South Africa", countryCode: "ZA", lat: -29.9, lng: 31.0, congestionPct: 84, queueCount: 47, avgWaitHours: 62.3, throughputTEU: 280000, status: "Critical", region: "Sub-Saharan Africa", unlocode: "ZADUR" },
+  { id: "p020", name: "Port of Salalah", country: "Oman", countryCode: "OM", lat: 16.9, lng: 54.0, congestionPct: 24, queueCount: 8, avgWaitHours: 6.4, throughputTEU: 480000, status: "Operational", region: "Middle East", unlocode: "OMSAL" },
+];
+
+export const congestionHistory = [
+  { date: "Mar 30", global: 51, pacific: 58, atlantic: 44 },
+  { date: "Mar 31", global: 53, pacific: 61, atlantic: 45 },
+  { date: "Apr 1", global: 55, pacific: 63, atlantic: 47 },
+  { date: "Apr 2", global: 54, pacific: 65, atlantic: 43 },
+  { date: "Apr 3", global: 58, pacific: 68, atlantic: 49 },
+  { date: "Apr 4", global: 56, pacific: 66, atlantic: 46 },
+  { date: "Apr 5", global: 57, pacific: 67, atlantic: 48 },
+];

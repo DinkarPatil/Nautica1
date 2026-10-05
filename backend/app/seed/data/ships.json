@@ -1,0 +1,7 @@
+[
+  {"id": "s_falcon", "name": "MV Nordic Falcon", "imo": "9876543", "type": "container", "flag": "BS"},
+  {"id": "s_aurora", "name": "MV Aurora", "imo": "9210987", "type": "tanker", "flag": "NO"},
+  {"id": "s_glimmora", "name": "MSC Glimmora", "imo": "9987654", "type": "container", "flag": "PA"},
+  {"id": "s_meridian", "name": "Meridian Sovereign", "imo": "9876544", "type": "tanker", "flag": "LR"},
+  {"id": "s_baltic", "name": "Baltic Navigator", "imo": "9765432", "type": "cargo", "flag": "MH"}
+]

@@ -1,0 +1,531 @@
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', -apple-system, system-ui, sans-serif;
+  /* Legacy aliases — keep so existing references stay valid */
+  --font-cormorant: var(--font-display);
+  --font-outfit: var(--font-body);
+  --background: #FAF8F5;
+  --foreground: #2D2A26;
+  --card: #FFFFFF;
+  --card-foreground: #2D2A26;
+  --popover: #FFFFFF;
+  --popover-foreground: #2D2A26;
+  --primary: #2D2A26;
+  --primary-foreground: #FAF8F5;
+  --secondary: #EDE8DF;
+  --secondary-foreground: #2D2A26;
+  --muted: #F0EBE3;
+  --muted-foreground: #9A8F82;
+  --accent: #E8DCC4;
+  --accent-foreground: #2D2A26;
+  --destructive: #8B5252;
+  --border: rgba(180, 170, 155, 0.35);
+  --input: rgba(180, 170, 155, 0.35);
+  --ring: #B89B4A;
+  --radius: 0.5rem;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+html { @apply font-body; }
+
+body {
+  background-color: #FAF8F5;
+  color: #2D2A26;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-feature-settings: "cv11" 1, "ss01" 1; /* Inter stylistic alternates */
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #EDE8DF; }
+::-webkit-scrollbar-thumb { background: #B8AEA0; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #7A7068; }
+
+/* Selection */
+::selection { background: #E8DCC4; color: #1A1816; }
+
+/* === Typography system =====================================================
+   Two-font strategy:
+     • font-display (Playfair Display, serif)  → H1/H2/H3 only
+     • font-body    (Inter, sans-serif)        → everything else
+                                                  (numbers, buttons, labels,
+                                                   nav, tags, body text)
+   ========================================================================= */
+
+/* Font family utilities */
+.font-display { font-family: var(--font-display) !important; }
+.font-body    { font-family: var(--font-body) !important; }
+
+/* Tabular numerals — for stats, tables, KPIs */
+.font-num {
+  font-family: var(--font-outfit);
+  font-feature-settings: "tnum" 1, "lnum" 1;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+/* === Headings (serif, Playfair Display, weight 500) ====================== */
+.text-h1 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(36px, 4vw, 48px);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+.text-h2 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(20px, 2vw, 24px);
+  line-height: 1.25;
+  letter-spacing: -0.005em;
+}
+.text-h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+
+/* === KPI / Stat numbers (sans, semi-bold, tabular) ======================= */
+.text-stat {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: clamp(28px, 2.6vw, 32px);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+.text-stat-sm {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.1;
+  letter-spacing: -0.005em;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+/* === Labels / eyebrows (sans, uppercase, weight 500, 0.08–0.12em) ======== */
+.text-label {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.text-label-sm {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.text-label-lg {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+/* Aliases retained for existing call sites */
+.text-eyebrow      { @apply text-label; }
+.text-eyebrow-hero { @apply text-label-lg; letter-spacing: 0.12em; }
+
+/* === Buttons (sans, weight 500, 0.04em, sentence/title — never aggressive) */
+.text-button {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.text-button-lg {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* === Tags / badges (sans, weight 500, subtle) ============================ */
+.text-tag {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 1.3;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* === Body / caption ===================================================== */
+.text-body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.55;
+  letter-spacing: 0;
+}
+.text-body-lg {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.55;
+}
+.text-caption {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #7A7068;
+}
+
+/* === Avatar initials =================================================== */
+.text-initials {
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+/* === UI primitives — used across every page ============================== */
+
+/* Tab row — text-based filter strip with hairline base + active 2px accent */
+.tab-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(212, 203, 191, 0.4);
+  overflow-x: auto;
+}
+.tab-item {
+  position: relative;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 14px;
+  padding: 12px 16px;
+  color: #9A8F82;                      /* greige — inactive */
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;                 /* overlay the row hairline */
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 150ms ease;
+  background: transparent;
+}
+.tab-item:hover { color: #4A453D; }
+.tab-item[aria-selected="true"],
+.tab-item.is-active {
+  color: #1A1816;
+  border-bottom-color: #2D2A26;        /* default accent — overridable inline */
+}
+
+/* Inline pill row — for sub-filters (priority, severity) */
+.pill-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.pill-row__label {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #9A8F82;
+  margin-right: 12px;
+}
+.pill-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: capitalize;
+  padding: 2px 6px;
+  color: #9A8F82;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  transition: color 150ms ease;
+}
+.pill-item:hover { color: #4A453D; }
+.pill-item.is-active { color: #1A1816; }
+.pill-sep {
+  color: rgba(212, 203, 191, 0.7);
+  padding: 0 6px;
+  user-select: none;
+}
+
+/* Buttons — calm and controlled */
+.btn-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  border-width: 1px;
+  border-style: solid;
+  cursor: pointer;
+  transition: background 150ms ease, color 150ms ease, border-color 150ms ease;
+}
+.btn-ghost {
+  color: #7A7068;
+  border-color: rgba(212, 203, 191, 0.6);
+  background: transparent;
+}
+.btn-ghost:hover { background: #EDE8DF; color: #4A453D; }
+
+.btn-subtle {
+  color: #9A7F35;
+  border-color: rgba(184, 155, 74, 0.45);
+  background: rgba(184, 155, 74, 0.04);
+}
+.btn-subtle:hover { background: rgba(184, 155, 74, 0.10); }
+
+.btn-primary {
+  color: #FAF8F5;
+  border-color: #2D2A26;
+  background: #2D2A26;
+}
+.btn-primary:hover { background: #1A1816; }
+
+/* Cards — soft depth, uniform across pages */
+.card-soft {
+  background: #FFFFFF;
+  border: 1px solid rgba(212, 203, 191, 0.4);
+  box-shadow:
+    0 1px 2px rgba(26, 24, 22, 0.025),
+    0 1px 3px rgba(26, 24, 22, 0.025);
+  transition: box-shadow 200ms ease, transform 200ms ease;
+}
+.card-soft--hover:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 2px 4px rgba(26, 24, 22, 0.04),
+    0 4px 12px rgba(26, 24, 22, 0.05);
+}
+
+/* Badges — uniform tag treatment (size/padding/weight identical;
+   only color differs by status). */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border: 1px solid;
+  line-height: 1.3;
+}
+
+/* Map styles */
+.rsm-geography { outline: none; }
+.rsm-sphere { fill: #EDE8DF !important; }
+
+/* Ticker */
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-ticker {
+  animation: ticker 55s linear infinite;
+  display: flex;
+  white-space: nowrap;
+}
+.animate-ticker:hover { animation-play-state: paused; }
+
+/* Fade up */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Gold pulse */
+@keyframes goldPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(184, 155, 74, 0.5); }
+  50% { box-shadow: 0 0 0 8px rgba(184, 155, 74, 0); }
+}
+.animate-gold-pulse { animation: goldPulse 2s ease-in-out infinite; }
+
+/* Risk pulse */
+@keyframes riskPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(139, 82, 82, 0.6); }
+  50% { box-shadow: 0 0 0 10px rgba(139, 82, 82, 0); }
+}
+.animate-risk-pulse { animation: riskPulse 1.5s ease-in-out infinite; }
+
+/* Shimmer */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.shimmer {
+  background: linear-gradient(90deg, #EDE8DF 25%, #FAF8F5 50%, #EDE8DF 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Slide in */
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+.animate-slide-in-right { animation: slideInRight 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+
+/* Stagger delays */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+.delay-700 { animation-delay: 0.7s; }
+.delay-800 { animation-delay: 0.8s; }
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+}
+
+@layer base {
+  body { @apply bg-background text-foreground; }
+}
+
+/* === Voyage Intelligence — scoped dark surface ============================
+   Activated by data-surface="voyage" on the voyage layout root.
+   Tokens are tailwind-mapped (theme.voyage.*). This block adds class-based
+   utilities used by voyage primitives (label, btn-vg-*, card, ring) so the
+   editorial GlimmoraNautica chrome and the dark Voyage workspace coexist.
+   ========================================================================= */
+[data-surface="voyage"] {
+  background: #0B0F17;
+  color: #F2F4F8;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-feature-settings: "cv11" 1, "ss01" 1;
+}
+[data-surface="voyage"] ::selection {
+  background: rgba(59,130,246,0.32);
+  color: #F2F4F8;
+}
+[data-surface="voyage"] ::-webkit-scrollbar-track { background: #11161F; }
+[data-surface="voyage"] ::-webkit-scrollbar-thumb { background: #2A3140; border-radius: 3px; }
+[data-surface="voyage"] ::-webkit-scrollbar-thumb:hover { background: #3A4258; }
+
+[data-surface="voyage"] .vg-label {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 1.3;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6B7280;
+}
+[data-surface="voyage"] .vg-mono {
+  font-feature-settings: "tnum" 1, "lnum" 1;
+  font-variant-numeric: tabular-nums lining-nums;
+  font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+}
+[data-surface="voyage"] .vg-num {
+  font-feature-settings: "tnum" 1, "lnum" 1;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+[data-surface="voyage"] .vg-card {
+  background: #11161F;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+}
+
+[data-surface="voyage"] .btn-vg-primary {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  height: 40px; padding: 0 20px; border-radius: 10px;
+  background: #3B82F6; color: #FFFFFF;
+  font-size: 13px; font-weight: 500; letter-spacing: 0;
+  border: 0; cursor: pointer;
+  transition: background 200ms ease;
+}
+[data-surface="voyage"] .btn-vg-primary:hover { background: #5B97F8; }
+[data-surface="voyage"] .btn-vg-primary:disabled { opacity: 0.4; cursor: not-allowed; }
+
+[data-surface="voyage"] .btn-vg-secondary {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  height: 36px; padding: 0 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.04);
+  color: #A4ACBA;
+  font-size: 12px; font-weight: 500;
+  border: 1px solid rgba(255,255,255,0.06); cursor: pointer;
+  transition: background 200ms ease, color 200ms ease, border-color 200ms ease;
+}
+[data-surface="voyage"] .btn-vg-secondary:hover {
+  background: rgba(255,255,255,0.07); color: #F2F4F8; border-color: rgba(255,255,255,0.10);
+}
+
+[data-surface="voyage"] .btn-vg-ghost {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  height: 40px; padding: 0 16px; border-radius: 10px;
+  background: transparent; color: #A4ACBA;
+  font-size: 13px; font-weight: 500; border: 0; cursor: pointer;
+  transition: background 200ms ease, color 200ms ease;
+}
+[data-surface="voyage"] .btn-vg-ghost:hover { background: rgba(255,255,255,0.03); color: #F2F4F8; }
+
+[data-surface="voyage"] .vg-input {
+  width: 100%; height: 44px; padding: 0 14px;
+  background: #080B11; color: #F2F4F8;
+  border: 1px solid rgba(255,255,255,0.06); border-radius: 10px;
+  font-size: 14px; outline: none;
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+[data-surface="voyage"] .vg-input::placeholder { color: #6B7280; }
+[data-surface="voyage"] .vg-input:focus {
+  border-color: #3B82F6; box-shadow: 0 0 0 4px rgba(59,130,246,0.12);
+}
+[data-surface="voyage"] textarea.vg-input { height: auto; padding: 12px 14px; line-height: 1.55; resize: vertical; }
+
+[data-surface="voyage"] .vg-shimmer {
+  background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.10) 50%, rgba(255,255,255,0.04) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
+  border-radius: 6px;
+}
+
+@keyframes vgPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(16,185,129,0.45); }
+  50%      { box-shadow: 0 0 0 6px rgba(16,185,129,0); }
+}
+[data-surface="voyage"] .vg-livedot {
+  width: 6px; height: 6px; border-radius: 9999px; background: #10B981;
+  display: inline-block; animation: vgPulse 1.8s ease-in-out infinite;
+}

@@ -1,0 +1,322 @@
+[
+  {
+    "id": "agi001",
+    "category": "Risk Warning",
+    "title": "Critical: Houthi Escalation Threatens Red Sea Fleet",
+    "summary": "7 vessels in active threat corridor. Recommend immediate Red Sea rerouting via Cape of Good Hope for all non-military transits.",
+    "reasoning": "Analysis of 72-hour Houthi attack pattern data reveals westward expansion of threat envelope to 15°E. Missile range capability confirmed at 280km. Probability of interdiction for commercial vessels: 34% (elevated from 12% baseline). Insurance P&I clubs Lloyd's, Gard, and Skuld have issued non-coverage advisories. US Navy NAVAREA IX warnings active. Economic analysis: Cape routing adds 14 days and $1.2M per voyage but eliminates existential loss risk. Risk-adjusted value strongly favors southern rerouting.",
+    "confidence": 96,
+    "priority": "critical",
+    "affectedVessels": [
+      "v017",
+      "v019",
+      "v039"
+    ],
+    "affectedPorts": [
+      "p020"
+    ],
+    "estimatedSaving": "Prevents potential $340M cargo loss exposure across 7 vessels",
+    "timestamp": "2026-04-05T09:30:00Z",
+    "isActioned": false
+  },
+  {
+    "id": "agi002",
+    "category": "Route Optimization",
+    "title": "Pacific Empress: Kuroshio Current Routing Advantage",
+    "summary": "Rerouting MV Pacific Empress 85nm north to exploit Kuroshio Extension current saves 18 hours and $240K fuel cost.",
+    "reasoning": "Satellite altimetry data shows Kuroshio Extension currently running at 2.8 knots — 40% above seasonal average. Vessel draught (13.8m) and beam (48m) compatible with northern routing through Japanese EEZ. Typhoon season weather model shows clear window for next 9 days. Fuel consumption model: standard routing at 19 knots burns 180 MT/day; current-assisted routing at 18.5 knots with 2.8kt assist reduces effective consumption to 152 MT/day. Annualized across 24 similar Pacific crossings, fleet-wide savings exceed $11.2M/year.",
+    "confidence": 89,
+    "priority": "high",
+    "affectedVessels": [
+      "v004"
+    ],
+    "estimatedSaving": "$240,000 per voyage, 18 hours ETA improvement",
+    "timestamp": "2026-04-05T08:45:00Z",
+    "isActioned": true
+  },
+  {
+    "id": "agi003",
+    "category": "Sanctions Intelligence",
+    "title": "Volga Express: Immediate Interdiction Required",
+    "summary": "OFAC SDN list confirmed match. Russian tanker IMO9432015 conducting ship-to-ship transfer with known sanctions-evading vessel.",
+    "reasoning": "Cross-reference of vessel AIS data against OFAC SDN list version 2026-Q1 returns 100% confidence match. Vessel was previously operating as 'Ural Star' under Maltese flag before re-flagging to Russia in November 2025 — classic sanctions evasion pattern. STS transfer activity detected at 47.9°N 37.5°E with vessel 'Azov Merchant' (also SDN-listed, not in fleet). Combined cargo value estimated at $180M crude oil. Recommendations: (1) Alert OFAC immediately, (2) Notify flag state authority, (3) Issue port ban across all allied jurisdiction terminals, (4) Coordinate with EUNAVFOR for monitoring.",
+    "confidence": 99,
+    "priority": "critical",
+    "affectedVessels": [
+      "v025"
+    ],
+    "timestamp": "2026-04-05T07:15:00Z",
+    "isActioned": false
+  },
+  {
+    "id": "agi004",
+    "category": "Port Advisory",
+    "title": "Singapore Port: Predicted Congestion Peak in 72 Hours",
+    "summary": "Machine learning forecast predicts MPA Singapore congestion reaching 84% by April 8. Recommend pre-positioning 11 vessels to Tanjung Pelepas.",
+    "reasoning": "LSTM neural network trained on 5 years of MPA Singapore vessel movement data shows 92% accuracy in predicting 72-hour congestion windows. Current leading indicators: 34 vessels in anchorage (3-year high), weather system in South China Sea delaying 6 inbound Panamax vessels, planned port infrastructure maintenance on berths 23–27 commencing April 7. Diverting 11 vessels to TPP adds $45K per vessel in costs but prevents $380K average demurrage per vessel at Singapore. Net fleet saving: $3.7M. Berth availability at TPP confirmed at 68%.",
+    "confidence": 87,
+    "priority": "high",
+    "affectedPorts": [
+      "p002",
+      "p014"
+    ],
+    "affectedVessels": [
+      "v018",
+      "v030",
+      "v040"
+    ],
+    "estimatedSaving": "$3.7M fleet-wide demurrage avoidance",
+    "timestamp": "2026-04-05T06:00:00Z",
+    "isActioned": false
+  },
+  {
+    "id": "agi005",
+    "category": "Trade Opportunity",
+    "title": "Spot Charter Arbitrage: LNG Spreads at 18-Month High",
+    "summary": "JKM–TTF LNG spread at $6.40/MMBtu. 4 eligible LNG carriers can capture $8.2M combined premium by diverting to East Asian buyers.",
+    "reasoning": "Japan Korea Marker (JKM) currently $14.20/MMBtu vs TTF at $7.80/MMBtu. Spread of $6.40 is highest since October 2024. Fleet analysis identifies 4 LNG carriers (v029, v042, v074, v085) with compatible cargo terms for destination flexibility. Voyage economics: diversion adds 9–14 days transit but generates $2.1M average incremental revenue per vessel. Counter-party risk: Jera, KOGAS, and CNOOC have confirmed spot lift interest. Recommended action window: 36 hours before spread compression expected from new Norway production announcement.",
+    "confidence": 82,
+    "priority": "high",
+    "affectedVessels": [
+      "v029",
+      "v042",
+      "v074",
+      "v085"
+    ],
+    "estimatedSaving": "$8.2M combined spot premium capture",
+    "timestamp": "2026-04-05T05:30:00Z",
+    "isActioned": false
+  },
+  {
+    "id": "agi006",
+    "category": "Route Optimization",
+    "title": "Suez Canal Grounding: Reroute 23 Vessels via Cape",
+    "summary": "24-hour Suez closure triggered by vessel grounding at km 151. AGI-computed optimal diversion reduces delay penalty by 31% vs waiting.",
+    "reasoning": "Probabilistic clearance model based on 2021 Evergreen incident and current vessel specs indicates 18–32 hour clearance range (80% confidence interval). Fleet impact analysis: 23 vessels in northbound/southbound queue. For vessels >500nm from Suez on current route, immediate Cape diversion saves 2.8 days vs worst-case wait scenario. Fuel cost of extra 3,200nm Cape routing partially offset by bunker price differential (Cape route passes Fujairah bunkering hub). Net present value of diversion vs waiting: positive for 14 of 23 affected vessels. Individualized routing recommendations computed for each vessel.",
+    "confidence": 85,
+    "priority": "critical",
+    "affectedPorts": [
+      "p005"
+    ],
+    "estimatedSaving": "$18M fleet-wide delay cost reduction",
+    "timestamp": "2026-04-05T09:45:00Z",
+    "isActioned": false
+  },
+  {
+    "id": "agi007",
+    "category": "Weather Alert",
+    "title": "Cyclone REMAL Trajectory Update: Bay of Bengal",
+    "summary": "Cyclone REMAL upgraded to Category 3. 23 vessels in projected path. Landfall forecast: Bangladesh coast, April 7 18:00 UTC.",
+    "reasoning": "Ensemble weather model analysis (ECMWF, GFS, UKMET consensus) shows 85% probability of Category 3 at landfall with wind speeds 115–130 knots. Storm surge forecast: 4–6m above normal tide. Port of Chittagong will likely close 36 hours before landfall. AGI vessel routing: 9 vessels should reverse course immediately (eastward diversion), 8 vessels can safely transit south of projected track with speed modifications, 6 vessels already past safe separation point — immediate port of refuge in Yangon recommended. All 23 vessel masters notified via GMDSS.",
+    "confidence": 91,
+    "priority": "critical",
+    "affectedVessels": [
+      "v054"
+    ],
+    "affectedPorts": [
+      "p009"
+    ],
+    "timestamp": "2026-04-05T04:00:00Z",
+    "isActioned": false
+  },
+  {
+    "id": "agi008",
+    "category": "Port Advisory",
+    "title": "Durban Port: Critical Congestion — Demurrage Warning",
+    "summary": "Durban Port at 84% capacity. 47 vessels queued. AGI models 62-hour average wait. Recommend diversion to Cape Town for non-time-critical cargo.",
+    "reasoning": "Port of Durban has been operating above 80% capacity for 11 consecutive days — longest stretch since 2023 rail strike crisis. Root cause: Transnet crane maintenance reducing throughput by 35%, combined with post-rainy-season agricultural export surge. Current queue: 47 vessels (23 bulk carriers, 18 container, 6 tankers). Average wait has reached 62 hours. Demurrage cost at $35K/day average: total fleet exposure $18.3M. Cape Town alternative: 240nm southwest, 38% spare capacity, same-day berth availability. Recommended for 12 bulk carriers with non-perishable agricultural cargo.",
+    "confidence": 93,
+    "priority": "high",
+    "affectedPorts": [
+      "p019"
+    ],
+    "estimatedSaving": "$18.3M demurrage exposure reduction",
+    "timestamp": "2026-04-04T20:00:00Z",
+    "isActioned": true
+  },
+  {
+    "id": "agi009",
+    "category": "Trade Opportunity",
+    "title": "Santos Port: Soybean Backhaul Arbitrage Window",
+    "summary": "Bulk carrier capacity available in Santos for 14 days. Soybean FOB price at $428/MT — 3-month low. Pre-position 6 bulk carriers for spot loading.",
+    "reasoning": "CBOT soybean futures indicate $428/MT current Santos FOB vs $446/MT 60-day forward — $18/MT contango creates arbitrage. AGI analysis of fleet: 6 bulk carriers (v015, v028, v036, v066, v079, v082) will complete current voyages within 12 days with South American hemisphere positions. Voyage economics: 22-day round trip, $8.2M gross revenue per vessel, $3.8M voyage costs, $4.4M net per vessel. Combined opportunity: $26.4M net across 6 vessels. Counter-party: Cargill and ADM confirmed spot lift interest. Risk: weather delays at Santos (currently 72-hour window — acceptable).",
+    "confidence": 79,
+    "priority": "medium",
+    "affectedVessels": [
+      "v015",
+      "v079"
+    ],
+    "affectedPorts": [
+      "p008"
+    ],
+    "estimatedSaving": "$26.4M combined net voyage revenue",
+    "timestamp": "2026-04-04T18:00:00Z",
+    "isActioned": false
+  },
+  {
+    "id": "agi010",
+    "category": "Sanctions Intelligence",
+    "title": "AIS Dark Activity: 3 Vessels Suspected Shadow Fleet",
+    "summary": "Transponder blackout pattern detected on 3 vessels consistent with sanctions evasion methodology. Flagging for enhanced monitoring.",
+    "reasoning": "Algorithm detected 3 vessels with transponder patterns matching shadow fleet profile: (1) >6 hours AIS blackout in open ocean, (2) position inconsistency on reactivation suggesting transponder manipulation, (3) all 3 vessels transiting within 200nm of sanctioned port. Cross-reference against UN Security Council sanctions list, EU autonomous measures, and OFAC SDN list pending 24-hour review. Vessels flagged: MV Horn of Gold (v019), MV Black Sea Eagle (v034), and one unidentified vessel at 28.4°N 51.2°E. Recommend: notify flag states, alert INTERPOL Maritime, enhance tracking with Spire/exactEarth satellite AIS overlay.",
+    "confidence": 77,
+    "priority": "high",
+    "affectedVessels": [
+      "v019",
+      "v034"
+    ],
+    "timestamp": "2026-04-04T16:30:00Z",
+    "isActioned": false
+  },
+  {
+    "id": "agi011",
+    "category": "Route Optimization",
+    "title": "Nordic Fleet: Winter Arctic Route Closing — Suez Alternative",
+    "summary": "Northern Sea Route transit window 2 weeks shorter than forecast. 4 LNG carriers should shift to Suez routing now to avoid ice-locked scenario.",
+    "reasoning": "Copernicus satellite sea ice data confirms anomalous early ice advance in Kara Sea. Icebreaker escort availability reducing to nil by April 18 (2 weeks ahead of schedule). MV Kola Arctic (v053) and 3 similar LNG carriers currently routing NSR will face ice-lock risk if proceeding. Suez Canal alternative: adds 8 days but guarantees delivery. Ice damage claims history for similar LNG carriers: $12M average repair cost. Insurance premium for NSR in ice conditions: +$2.8M vs standard. Risk-adjusted decision strongly favors Suez diversion. Window for course change decision: 48 hours.",
+    "confidence": 88,
+    "priority": "high",
+    "affectedVessels": [
+      "v053"
+    ],
+    "estimatedSaving": "Avoids $12M potential ice damage exposure per vessel",
+    "timestamp": "2026-04-04T14:00:00Z",
+    "isActioned": false
+  },
+  {
+    "id": "agi012",
+    "category": "Port Advisory",
+    "title": "Shanghai Port Congestion Forecast: 14-Day Outlook",
+    "summary": "Post-Golden Week surge expected April 12–19. AGI predicts 89% congestion. Pre-clearance and staggered arrival scheduling recommended.",
+    "reasoning": "Golden Week holiday (April 1–7) creates predictable post-holiday cargo surge at Shanghai SIPG. 5-year historical analysis: congestion consistently peaks 5–8 days after Golden Week end at +29% above normal throughput demand. Current model inputs: 187 inbound vessels scheduled April 10–14 (22% above normal), labor overtime availability limited to 15%, rail connectivity to inland China running at 94% capacity. Staggered arrival windows available: 6-hour scheduling slots for 42 vessels willing to accept modest route adjustments. Berth pre-assignment system now open — recommend booking within 72 hours.",
+    "confidence": 84,
+    "priority": "medium",
+    "affectedPorts": [
+      "p003"
+    ],
+    "timestamp": "2026-04-04T12:00:00Z",
+    "isActioned": true
+  },
+  {
+    "id": "agi013",
+    "category": "Trade Opportunity",
+    "title": "Container Rate Spike: Trans-Pacific Eastbound — Lock In Now",
+    "summary": "SCFI Trans-Pacific Eastbound index up 18% in 7 days. Spot rates at $4,800/FEU. Recommend locking long-term contracts before correction.",
+    "reasoning": "Shanghai Containerized Freight Index (SCFI) Trans-Pacific Eastbound rose from $4,060 to $4,800/FEU in 7 trading days — driven by front-loading ahead of potential US tariff changes. Historical analysis shows similar rate spikes (>15% in <10 days) precede mean-reversion within 21 days in 73% of cases. Current carrier capacity: Maersk and MSC have removed 12% slack capacity. Window for rate lock-in at current elevated levels: estimated 14 days. Recommended commercial action: approach key Trans-Pacific shippers for 6-month forward rate agreements at $4,400/FEU — captures 91% of current premium with contractual certainty.",
+    "confidence": 76,
+    "priority": "medium",
+    "estimatedSaving": "$22M annualized revenue lock-in opportunity",
+    "timestamp": "2026-04-04T10:00:00Z",
+    "isActioned": false
+  },
+  {
+    "id": "agi014",
+    "category": "Weather Alert",
+    "title": "North Atlantic: Explosive Cyclogenesis Warning",
+    "summary": "Rapid weather bomb developing. Wind speeds 65+ knots forecast for April 7–9. 8 vessels currently in projected hazard zone.",
+    "reasoning": "European Centre for Medium-Range Weather Forecasts (ECMWF) model shows explosive cyclogenesis event with central pressure dropping 24mb in 24 hours — met office 'weather bomb' threshold. Peak conditions forecast: 55–65 knot sustained winds, 14–18m significant wave height, period 16–18 seconds (highly damaging for vessel structural integrity and cargo securing). 8 identified vessels in hazard zone can reach safe haven ports (Azores, Faial, Horta) within 18 hours if they divert immediately. For vessels unable to divert: heave-to procedure recommended at bearing 320° from storm center. Brief masters on watertight integrity checks.",
+    "confidence": 90,
+    "priority": "critical",
+    "affectedVessels": [
+      "v006",
+      "v042",
+      "v056"
+    ],
+    "timestamp": "2026-04-04T08:00:00Z",
+    "isActioned": false
+  },
+  {
+    "id": "agi015",
+    "category": "Route Optimization",
+    "title": "ESG Optimization: 12% Emissions Reduction via Speed Trim",
+    "summary": "Fleet-wide 1.2 knot average speed reduction on 34 vessels can achieve 12% CO2 reduction with only 4.2 hour average ETA impact.",
+    "reasoning": "Propulsion efficiency modeling across 34 active fleet vessels shows average fuel consumption curve has third-order polynomial relationship with speed. At current average fleet speed of 16.8 knots, reducing to 15.6 knots (7.1% speed reduction) achieves 12.4% fuel and CO2 reduction due to cubic relationship of hull resistance. Average ETA impact: 4.2 hours per voyage. Financial impact: $1.8M fuel saving per month fleet-wide. EU ETS carbon cost offset: $420K/month. Against demurrage risk: only 3 vessels have tight laytime windows — speed trim not recommended for those. CII rating improvement: moves 8 vessels from 'D' to 'C' rating band, avoiding upcoming regulatory surcharges.",
+    "confidence": 94,
+    "priority": "medium",
+    "estimatedSaving": "$2.2M/month combined fuel + carbon cost saving",
+    "timestamp": "2026-04-04T06:00:00Z",
+    "isActioned": true
+  },
+  {
+    "id": "agi016",
+    "category": "Sanctions Intelligence",
+    "title": "Cargo Verification Alert: Mismatched Manifest — MV Karachi Spirit",
+    "summary": "B/L manifest declares 'General Cargo' but satellite thermal imagery suggests possible weapons-grade materials. Immediate inspection recommended.",
+    "reasoning": "Cross-analysis of bill of lading manifest against (1) satellite thermal imagery of vessel hold areas, (2) vessel draft calculations suggesting cargo weight 840MT above declared, (3) vessel calling pattern through Karachi — port previously associated with arms smuggling activity. Thermal signature analysis inconclusive but anomalous. Draft discrepancy of 1.4m suggests undeclared dense cargo. Port of Colombo Sri Lanka Customs and INTERPOL Maritime Wing have been pre-notified. Upon arrival, full manifest inspection, sniffer dog deployment, and X-ray scanning of containers recommended. Estimated inspection delay: 8–12 hours.",
+    "confidence": 72,
+    "priority": "high",
+    "affectedVessels": [
+      "v013"
+    ],
+    "timestamp": "2026-04-03T22:00:00Z",
+    "isActioned": false
+  },
+  {
+    "id": "agi017",
+    "category": "Port Advisory",
+    "title": "Rotterdam ECT Delta Terminal: Berth Optimization Available",
+    "summary": "Berth 7 and 8 opening 36 hours early. Re-scheduling 4 vessels can save combined 94 hours demurrage.",
+    "reasoning": "ECT Delta Terminal real-time berth management data shows MV Celsius Stockholm (non-fleet) departing 36 hours ahead of schedule due to commercial cargo cancellation. Berths 7 and 8 will be simultaneously available April 6–7. Fleet vessels MSC Glimmora (v001) and Rhine Monarch (v051) can reach Rotterdam within this window with 1.5 knot speed increase from current positions. Combined demurrage saving: $380K. Bunker cost of speed increase: $42K. Net benefit: $338K. Secondary opportunity: container exchange with berthing overlap allows consolidation of 340 TEU, saving one additional vessel voyage.",
+    "confidence": 91,
+    "priority": "medium",
+    "affectedVessels": [
+      "v001",
+      "v051"
+    ],
+    "affectedPorts": [
+      "p001"
+    ],
+    "estimatedSaving": "$338K net demurrage and voyage saving",
+    "timestamp": "2026-04-03T18:00:00Z",
+    "isActioned": true
+  },
+  {
+    "id": "agi018",
+    "category": "Trade Opportunity",
+    "title": "Grain Export Window: Ukraine Black Sea Corridor",
+    "summary": "UN-brokered temporary corridor agreement creates 72-hour grain export window. 3 bulk carriers can load 180,000MT from Odessa.",
+    "reasoning": "Diplomatic intelligence feed confirms UN Black Sea Grain Initiative temporary extension protocol activated for 72-hour window April 8–10. Historical data: similar windows have been successfully utilized in 4 of 6 previous activations (67% success rate). Vessel requirements: beam <32m, draft <9.5m for Bosphorus transit compliance. Three fleet bulk carriers meet criteria (v023, v031, and v082). Combined loading capacity: 184,000MT. Wheat FOB Odessa currently $248/MT. Voyage economics: excellent. Geopolitical risk: Ukrainian Navy providing escort. Insurance: War risk premiums applicable at Lloyd's 0.08% on value. Recommend commercial team engagement within 12 hours.",
+    "confidence": 67,
+    "priority": "medium",
+    "affectedVessels": [
+      "v023",
+      "v031"
+    ],
+    "affectedPorts": [
+      "p001"
+    ],
+    "estimatedSaving": "$12.4M gross revenue opportunity",
+    "timestamp": "2026-04-03T14:00:00Z",
+    "isActioned": false
+  },
+  {
+    "id": "agi019",
+    "category": "Route Optimization",
+    "title": "Panama Canal Draft Restriction: 14 Vessels Need Pre-Planning",
+    "summary": "Gatun Lake at 26.4m — triggering 44ft draft restriction. 14 fleet vessels need load optimization or alternative Magellan routing.",
+    "reasoning": "Panama Canal Authority (ACP) issued revised draft restriction of 44ft (13.4m) effective immediately due to below-normal Gatun Lake level of 26.4m (27.0m normal minimum for unrestricted transit). Current El Niño pattern forecast to maintain restriction for minimum 45 days. Fleet analysis: 14 vessels with loaded draft exceeding 13.4m are scheduled Panama Canal transits. Options: (1) Partial load reduction — commercially viable for 6 vessels, (2) Cape Horn routing — adds 8,400nm and 22 days but preserves full cargo, (3) Mixed cargo split with partial container transshipment at Cartagena. AGI has modeled all 14 vessels individually with optimal recommendation per vessel.",
+    "confidence": 97,
+    "priority": "high",
+    "affectedVessels": [
+      "v004",
+      "v099"
+    ],
+    "estimatedSaving": "$8.9M combined schedule optimization value",
+    "timestamp": "2026-04-03T10:00:00Z",
+    "isActioned": false
+  },
+  {
+    "id": "agi020",
+    "category": "Sanctions Intelligence",
+    "title": "Ship-to-Ship Transfer Intelligence: Gulf of Oman Dark Activity",
+    "summary": "Satellite SAR imagery confirms STS transfer between sanctioned and fleet-adjacent vessels. Investigation and distancing protocol recommended.",
+    "reasoning": "Synthetic Aperture Radar (SAR) satellite pass at 03:47 UTC April 5 confirms ship-to-ship transfer activity at 22.4°N 58.8°E in Gulf of Oman — international waters. Analysis: participating vessel 1 confirmed on OFAC SDN list (Iranian-flagged VLCC). Participating vessel 2 unidentified (AIS off). Transfer volume estimated at 180,000MT crude oil. Fleet vessel MV Oman Pearl (v074) transited within 18nm of STS location 4 hours prior. While no direct involvement indicated, proximity may trigger enhanced due diligence requirements under UK OFSI and US OFAC regulations. Recommend: (1) Document MV Oman Pearl's navigation log, (2) Pre-notify compliance team, (3) Prepare master's declaration of non-involvement.",
+    "confidence": 81,
+    "priority": "high",
+    "affectedVessels": [
+      "v074"
+    ],
+    "timestamp": "2026-04-05T10:00:00Z",
+    "isActioned": false
+  }
+]

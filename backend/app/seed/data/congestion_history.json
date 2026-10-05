@@ -1,0 +1,44 @@
+[
+  {
+    "date": "Mar 30",
+    "global": 51,
+    "pacific": 58,
+    "atlantic": 44
+  },
+  {
+    "date": "Mar 31",
+    "global": 53,
+    "pacific": 61,
+    "atlantic": 45
+  },
+  {
+    "date": "Apr 1",
+    "global": 55,
+    "pacific": 63,
+    "atlantic": 47
+  },
+  {
+    "date": "Apr 2",
+    "global": 54,
+    "pacific": 65,
+    "atlantic": 43
+  },
+  {
+    "date": "Apr 3",
+    "global": 58,
+    "pacific": 68,
+    "atlantic": 49
+  },
+  {
+    "date": "Apr 4",
+    "global": 56,
+    "pacific": 66,
+    "atlantic": 46
+  },
+  {
+    "date": "Apr 5",
+    "global": 57,
+    "pacific": 67,
+    "atlantic": 48
+  }
+]

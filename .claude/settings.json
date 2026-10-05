@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@14 frontend --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(npx shadcn@latest init --yes --defaults)",
+      "Bash(ls -la tailwind.config.*)",
+      "Bash(ls -la next.config.*)",
+      "WebFetch(domain:www.enterpriseready.io)",
+      "WebFetch(domain:www.jigz.dev)",
+      "WebFetch(domain:medium.com)",
+      "WebFetch(domain:sedna.com)",
+      "WebFetch(domain:clerk.com)",
+      "WebFetch(domain:dev.to)",
+      "WebFetch(domain:www.descope.com)",
+      "Bash(npx next:*)",
+      "Bash(grep -l \"ProtectedPage\" \"d:/BAAREZ/Glimmora Marine/frontend/app/\"*/page.tsx)",
+      "Bash(grep -l \"RoleGate\" \"d:/BAAREZ/Glimmora Marine/frontend/app/\"*/page.tsx \"d:/BAAREZ/Glimmora Marine/frontend/app/dashboard/page.tsx\")",
+      "Bash(sort -t: -k2 -rn)",
+      "Bash(xargs sed:*)",
+      "Bash(find . -name '*.tsx' -exec sed -i -e 's/text-\\\\[9px\\\\]/text-\\\\[11px\\\\]/g' -e 's/text-\\\\[10px\\\\]/text-xs/g' '{}' ';')",
+      "Bash(find . -name '*.tsx' -exec sed -i -e 's/text-\\\\[11px\\\\]/text-xs/g' '{}' ';')",
+      "Bash(wc -l \"d:/BAAREZ/Glimmora Marine/frontend/app/data\"/*.ts)",
+      "Bash(npm list:*)"
+    ]
+  }
+}

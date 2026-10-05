@@ -1,0 +1,39 @@
+[project]
+name = "glimmora-nautica-backend"
+version = "0.1.0"
+description = "GlimmoraNautica maritime intelligence backend (FastAPI + Vertex AI)"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "pydantic>=2.6",
+    "pydantic-settings>=2.2",
+    "sqlalchemy[asyncio]>=2.0",
+    "aiosqlite>=0.20",
+    "alembic>=1.13",
+    "python-jose[cryptography]>=3.3",
+    "passlib[bcrypt]>=1.7",
+    "bcrypt==4.0.1",
+    "httpx>=0.27",
+    "sse-starlette>=2.1",
+    "google-cloud-aiplatform>=1.60",
+    "google-genai>=1.0",
+    "email-validator>=2.0",
+    "python-multipart>=0.0.9",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "anyio>=4.0",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "session"
+testpaths = ["tests/unit", "tests/integration"]
+python_files = ["test_*.py"]
+
+[tool.setuptools]
+packages = ["app"]

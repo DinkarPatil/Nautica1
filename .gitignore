@@ -1,0 +1,33 @@
+# Secrets — keep local only
+.env
+.env.local
+.env.local.example
+**/.env
+!**/.env.local.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+backend/glimmora.db
+backend/test_glimmora.db
+backend/vertex_glimmora.db
+backend/*.db
+backend/*.db-journal
+
+# Node
+node_modules/
+.next/
+out/
+
+# Playwright artifacts
+e2e/test-results/
+e2e/playwright-report/
+e2e/playwright/.cache/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/

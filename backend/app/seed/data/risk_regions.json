@@ -1,0 +1,12 @@
+[
+  {"id": "rr_redsea", "name": "Red Sea / Gulf of Aden", "lat": 13.0, "lng": 43.0, "level": "critical", "summary": "Active threat corridor; rerouting advised."},
+  {"id": "rr_hormuz", "name": "Strait of Hormuz", "lat": 26.6, "lng": 56.3, "level": "high", "summary": "Heightened tensions; transit windows volatile."},
+  {"id": "rr_blacksea", "name": "Black Sea", "lat": 44.0, "lng": 35.0, "level": "high", "summary": "Conflict zone; insurance premiums elevated."},
+  {"id": "rr_southchina", "name": "South China Sea", "lat": 12.0, "lng": 117.0, "level": "medium", "summary": "Sovereignty disputes; intermittent advisories."},
+  {"id": "rr_gulf_guinea", "name": "Gulf of Guinea", "lat": 3.0, "lng": 4.0, "level": "high", "summary": "Piracy hotspot; armed escort recommended."},
+  {"id": "rr_horn_africa", "name": "Horn of Africa", "lat": 11.0, "lng": 51.0, "level": "high", "summary": "Piracy attempts increasing; HRA designation active."},
+  {"id": "rr_strait_malacca", "name": "Strait of Malacca", "lat": 3.5, "lng": 99.0, "level": "medium", "summary": "Congestion + petty piracy; nominal."},
+  {"id": "rr_taiwan", "name": "Taiwan Strait", "lat": 24.0, "lng": 119.5, "level": "medium", "summary": "Geopolitical risk; routing flexibility advised."},
+  {"id": "rr_caribbean_north", "name": "Caribbean (Northern)", "lat": 18.0, "lng": -74.0, "level": "low", "summary": "Routine; nominal traffic conditions."},
+  {"id": "rr_north_atlantic", "name": "North Atlantic", "lat": 50.0, "lng": -30.0, "level": "low", "summary": "Routine; weather is the dominant variable."}
+]
